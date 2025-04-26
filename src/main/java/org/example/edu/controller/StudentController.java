@@ -47,7 +47,7 @@ public class StudentController {
     }
 
     @GetMapping("/student/name/")
-    public List<Student> findByName(@ReguestParam String name) {
+    public List<Student> findByName(@RequestParam String name) {
         List<Student> st = repository.findByName(name);
         return st;
     }
